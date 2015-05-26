@@ -5,6 +5,13 @@ def create
     redirect_to article_path(@article)
   end
  
+  def destroy
+    @article = Article.find(params[:article_id])
+    @ticket = @article.tickets.find(params[:id])
+    @ticket.destroy
+    redirect_to article_path(@article)
+  end
+  
   private
   def ticket_params
     params.require(:ticket).permit(:title, :description, :status, :difficulty)

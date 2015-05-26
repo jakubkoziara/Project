@@ -17,3 +17,9 @@
     <strong>Difficulty:</strong>
     <%= ticket.difficulty %>
   </p>
+
+<p>
+  <%= link_to 'Delete ticket', [ticket.article, ticket],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>
