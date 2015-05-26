@@ -1,11 +1,38 @@
 <p>
-  <strong>Title:</strong>
-  <%= @article.title %>
+  <strong>Title:</strong>
+  <%= @article.title %>
 </p>
- 
+ 
 <p>
-  <strong>Text:</strong>
-  <%= @article.text %>
+  <strong>Text:</strong>
+  <%= @article.text %>
 </p>
- <%= link_to 'Edit', edit_article_path(@article) %> |
+<h2>Tickets</h2>
+<%= render @article.tickets %>
+ 
+ 
+<h2>Add a ticket to project:</h2>
+<%= form_for([@article, @article.tickets.build]) do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+<p>
+    <%= f.label :status %><br>
+    <%= f.text_area :status %>
+  </p>
+<p>
+    <%= f.label :difficulty %><br>
+    <%= f.text_area :difficulty %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+ 
+<%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>
