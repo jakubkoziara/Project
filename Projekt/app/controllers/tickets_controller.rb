@@ -11,6 +11,20 @@ def create
     @ticket.destroy
     redirect_to article_path(@article)
   end
+  def edit
+    @ticket = Ticket.find(params[:id])
+    
+end
+  def update
+  @article = Article.find(params[:article_id])
+    @ticket = @article.tickets.update(ticket_params)
+ 
+    if @ticket.update(ticket_params)
+      redirect_to @ticket
+  else
+    render 'edit'
+  end
+end
   
   private
   def ticket_params
