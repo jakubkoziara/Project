@@ -1,0 +1,21 @@
+<h2>Tickets</h2>
++<% @article.tickets.each do |ticket| %>
++  <p>
++  <strong>Title:</strong>
++    <%= ticket.title %>
++  </p>
++ :title, :description, :priority, :status, :difficulty)
++  <p>
++ <strong>Description:</strong>
++    <%= ticket.description %>
++  </p>
++ <strong>Priority:</strong>
++    <%= ticket.priority %>
++  </p>
++ <strong>Status:</strong>
++    <%= ticket.status %>
++  </p>
++ <strong>Difficulty:</strong>
++    <%= ticket.difficulty %>
++  </p>
++<% end %>

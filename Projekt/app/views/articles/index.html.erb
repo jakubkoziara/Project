@@ -1,11 +1,15 @@
 <h1>Listing Projects</h1>
- 
-<table>
+ <div class="media">
+  <div class="media-body">
+<table class="table table-striped">
+  <thead>
+
   <tr>
     <th>Title</th>
-    <th>Text</th>
+    <th>Description</th>
     <th colspan="2"></th>
   </tr>
+  </thead>  
  
   <% @articles.each do |article| %>
     <tr>
@@ -19,6 +23,8 @@
     </tr>
   <% end %>
 </table>
-
+ </div>
+</div>
 <%= link_to 'New project', new_article_path %>
+
 

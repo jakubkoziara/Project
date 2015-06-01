@@ -1,12 +1,12 @@
 <%= simple_form_for([@article, @article.tickets.build]) do |f| %>
-  <p>
+  
     <%= f.input :title %><br>
     
-  </p>
-  <p>
+ 
+  
     <%= f.input :description %><br>
 
-  </p>
+ 
  <%= f.input :priority do %>
     <%= f.select :priority, ['Very Low','Low', 'Normal', 'High', 'Very High',] %>
   <% end %>
@@ -16,7 +16,7 @@
   <%= f.input :status do %>
     <%= f.select :status, ['Open', 'Closed', 'Cancelled'] %>
   <% end %>
-  <p>
+  
     <%= f.submit %>
-  </p>
+  
 <% end %>
