@@ -78,7 +78,7 @@
             <ul class="nav nav-list">
               <li class="nav-header"></li>
               <% if current_user %>
-              <li><%= link_to 'List of projects', articles_path %></li>
+              <li><%= link_to 'List of projects', articles_path,:class => 'btn btn-mini btn-info' %></li>
               <%else %>
               <li>You must be logged in</li>
               

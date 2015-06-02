@@ -6,7 +6,7 @@
   <th>Title:</th>
       
 
-  <th>Text:</th>
+  <th>Description:</th>
       
       <th colspan="2"></th>
 </tr>
@@ -18,12 +18,11 @@
     </table>
     </div>
 </div>
-<h2>Tickets</h2>
+<h2>Tickets attached to <%= @article.title %>:</h2><br>
 <%= render @article.tickets %>
  
  
-<h2>Add a ticket to project:</h2>
+<h2>Add a ticket to this project:</h2>
 <%= render 'tickets/form' %>
- 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+ <br>
+<%= link_to 'Back', articles_path,:class => 'btn btn-mini btn-info' %>
