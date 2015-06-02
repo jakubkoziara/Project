@@ -1,7 +1,14 @@
 <h1>Projects management</h1>
 
-<%= link_to 'List of projects', controller: 'articles' %>
+
 <br>
-<%= link_to 'login', new_user_session_path %><br>
-<%= link_to 'logout', destroy_user_session_path, method: :delete %>
-<%= link_to 'edit',edit_user_registration_path, method: :get %>
+
+<% if current_user %>
+<%= link_to 'logout', destroy_user_session_path, :class => 'btn btn-mini btn-info', method: :delete %><br><br>
+<% else %>
+<%= link_to 'login', new_user_session_path, :class => 'btn btn-mini btn-info' %><br><br>
+  <% end %>
+
+
+            
+          
