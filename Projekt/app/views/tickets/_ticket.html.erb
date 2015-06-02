@@ -23,8 +23,10 @@
   </p>
 
 <p>
-  <%= link_to 'Edit', "/articles/#{@article.id}/tickets/#{ticket.id}/edit",:class => 'btn btn-mini btn-info' %>
+ 
+  
   <%= link_to 'Delete ticket', [ticket.article, ticket],
                method: :delete,
                data: { confirm: 'Are you sure?' }, :class => 'btn btn-mini btn-info' %>
+ 
 </p>

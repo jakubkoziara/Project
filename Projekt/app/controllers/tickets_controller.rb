@@ -30,7 +30,7 @@ def create
   end
   def update
   @article = Article.find(params[:article_id])
-    @ticket = @article.tickets.find(ticket_params)
+    @ticket = @article.tickets.find(params[:id])
  
     if @ticket.update(ticket_params)
       redirect_to article_ticket_path(@article, @ticket)
